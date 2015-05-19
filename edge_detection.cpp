@@ -24,6 +24,7 @@ int main()
    //////////we converted the image to gray bcoz laplacian works in gray image only//////
    /////////laplacian operator is used to detect edges/////
   const int LAPLACIAN_FILTER_SIZE = 5;
+  /////////CV_8U is unsigned 8bit/pixel - ie a pixel can have values 0-255, this is the normal range for most image and video formats.///////////////
   Laplacian(gray, edges, CV_8U, LAPLACIAN_FILTER_SIZE) ;
   imshow("laplacian",edges);
   if (char(waitKey(10))=='x')
